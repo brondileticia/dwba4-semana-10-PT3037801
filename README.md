@@ -1,78 +1,64 @@
-# Site IFSP - Câmpus Pirituba
+# Semana 10 - Bootstrap
 
-**Disciplina:** Desenvolvimento Web Client | **Semana 09:** Manipulação de Páginas com JavaScript (DOM)
+**Disciplina:** Desenvolvimento Web Client | **Curso:** ADS | **IFSP - Câmpus Pirituba**
 
-## 📌 Sobre o Projeto
+## 📌 Sobre
 
-Site institucional do IFSP Câmpus Pirituba com páginas de cursos, eventos, contato e login.  
-**Novidade da Semana 09:** Slideshow interativo com JavaScript e manipulação do DOM.
+Site institucional do IFSP Câmpus Pirituba com página de login estilizada usando **Bootstrap 5**.
 
 ## 🚀 Tecnologias
-- HTML5
-- CSS3
-- JavaScript (DOM)
 
-## 📁 Estrutura
+- HTML5 / CSS3
+- Bootstrap 5.3
+- Bootstrap Icons
+- JavaScript
+
+## 🎯 O que foi feito?
+
+### Página de Login (login.html)
+
+| Antes | Depois com Bootstrap |
+|-------|---------------------|
+| Formulário simples | Card estilizado com sombra |
+| Sem ícones | Input Group com ícones |
+| Alert padrão | Alertas Bootstrap coloridos |
+| Sem toggle | Botão mostrar/esconder senha |
+| Layout fixo | Totalmente responsivo |
+
+### Componentes Bootstrap utilizados
+
+```html
+✅ Card          - Container do login
+✅ Form Control  - Campos estilizados  
+✅ Input Group   - Ícones nos campos
+✅ Button        - Botão Entrar
+✅ Alert         - Mensagens de validação
+✅ Icons         - Ícones Bootstrap
 ```
-projeto-ifsp/
-├── index.html          # Página principal (com slideshow)
-├── cursos.html
-├── sobre.html
-├── eventos.html        # Formulário de inscrição
-├── contato.html
-├── login.html
-├── css/style.css
-├── img/slideshow/      # Imagens do slideshow
-└── favicon.ico
-```
 
-## 🎬 Slideshow
 
-| Slide | Conteúdo |
-|-------|----------|
-| 1 | Entrada do Campus |
-| 2 | Caixinha de Sugestões |
-| 3 | Processo Seletivo 2026 |
-| 4 | Comunidade WhatsApp |
-
-### Funcionalidades
-- ✅ Transição automática a cada 5 segundos
-- ✅ Botões ◀ ▶ para navegação manual
-- ✅ Indicadores (dots) para ir direto ao slide
-- ✅ Botão Play/Pause
-- ✅ Pausa ao passar o mouse
-- ✅ Navegação por teclado (setas ← →)
-
-## 🔧 Manipulação do DOM
+## 🔧 Funcionalidades JavaScript
 
 ```javascript
-// Seleção de elementos
-const slides = document.querySelectorAll('.slide');
+// 1. Mostrar/esconder senha
+toggleSenha.addEventListener('click', () => {
+    // alterna type entre password/text
+});
 
-// Manipulação de classes
-slide.classList.add('active');
-slide.classList.remove('active');
-
-// Eventos
-botao.addEventListener('click', () => {});
-document.addEventListener('keydown', () => {});
-
-// Temporizador
-setInterval(nextSlide, 6000);
+// 2. Validação com Bootstrap Alert
+form.addEventListener('submit', () => {
+    // exibe alerta de erro/sucesso
+});
 ```
 
-## 🎨 Cores
-- Verde: `#2F9E41`
-- Verde claro: `#D7E087`
-- Vermelho: `#CD181D`
+## 📱 Responsividade
 
-## 🚦 Como executar
-1. Abra o arquivo `index.html` no navegador
-2. Pressione `F12` para ver os logs do slideshow no console
+- ✅ Desktop: Card centralizado
+- ✅ Tablet: Card ocupa 75% da tela
+- ✅ Mobile: Card ocupa 90% da tela
 
-## 📱 Responsivo
-Funciona em desktop, tablet e mobile.
 
 ## 👨‍💻 Autor
+
 **Nome:** Letícia Brondi Carvalheiro
-**Curso:** ADS
+**Prontuário:** PT3037801
