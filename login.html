@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFSP - Login | Câmpus Pirituba</title>
+    
+    <!-- Bootstrap CSS (apenas para componentes específicos) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    
+    <!-- Seu CSS personalizado -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Skip to content link para acessibilidade -->
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+    <!-- Header Fixo com subtítulo -->
+    <header>
+        <div class="logo-container">
+            <img src="img/Logo.png" alt="Logo IFSP" class="logo">
+            <h1>IFSP <small>Câmpus Pirituba</small></h1>
+        </div>
+        
+        <nav aria-label="Menu principal">
+            <ul>
+                <li><a href="index.html">Principal</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="eventos.html">Eventos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="login.html" aria-current="page">Login</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Menu Superior Direito -->
+        <div class="menu-superior">
+            <a href="https://www.instagram.com/ifspcampuspirituba/" target="_blank" aria-label="Instagram IFSP">
+                <svg class="instagram-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1112.324 0 6.162 6.162 0 01-12.324 0zM12 16a4 4 0 110-8 4 4 0 010 8zm4.965-10.405a1.44 1.44 0 112.881.001 1.44 1.44 0 01-2.881-.001z"/>
+                </svg>
+                <span>@ifspcampuspirituba</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="conteudo-pagina" id="main-content">
+        <div class="login-container">
+            <div class="login-box">
+                <h1>Acesso ao Sistema</h1>
+                
+                <form class="form-login" action="#" method="POST" id="loginForm">
+                    <!-- Campo Usuário -->
+                    <div class="form-group">
+                        <label for="usuario">
+                            <i class="bi bi-person-fill"></i> Usuário:
+                        </label>
+                        <input type="text" 
+                               id="usuario" 
+                               name="usuario" 
+                               placeholder="Digite seu usuário" 
+                               required>
+                        <small class="form-help">Use seu login do SUAP</small>
+                    </div>
+
+                    <!-- Campo Senha -->
+                    <div class="form-group">
+                        <label for="senha">
+                            <i class="bi bi-lock-fill"></i> Senha:
+                        </label>
+                        <div style="position: relative;">
+                            <input type="password" 
+                                   id="senha" 
+                                   name="senha" 
+                                   placeholder="Digite sua senha" 
+                                   required>
+                            <button type="button" 
+                                    id="toggleSenha" 
+                                    style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer; color: #666;">
+                                <i class="bi bi-eye-slash"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Botão Entrar -->
+                    <div class="form-actions">
+                        <button type="submit" class="btn-submit">
+                            <i class="bi bi-box-arrow-in-right"></i> Entrar
+                        </button>
+                    </div>
+
+                    <!-- Links -->
+                    <div class="login-links">
+                        <a href="#">
+                            <i class="bi bi-question-circle"></i> Esqueceu sua senha?
+                        </a>
+                        <span>|</span>
+                        <a href="#">
+                            <i class="bi bi-person-plus"></i> Criar nova conta
+                        </a>
+                    </div>
+                </form>
+
+                <!-- Informações de Acesso -->
+                <div class="info-box" style="margin-top: 2rem;">
+                    <p><strong>Acesso para:</strong></p>
+                    <ul class="lista-customizada">
+                        <li><i class="bi bi-person-check"></i> Alunos</li>
+                        <li><i class="bi bi-briefcase"></i> Servidores (Docentes e Técnicos)</li>
+                        <li><i class="bi bi-people"></i> Colaboradores externos</li>
+                    </ul>
+                    <p><small><i class="bi bi-info-circle"></i> Utilize seu login do SUAP para acessar o sistema.</small></p>
+                </div>
+
+                <!-- Badges de Segurança -->
+                <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
+                    <span style="background: rgba(47, 158, 65, 0.1); color: #2F9E41; padding: 0.4rem 0.8rem; border-radius: 50px; font-size: 0.75rem; display: inline-flex; align-items: center; gap: 5px;">
+                        <i class="bi bi-shield-check"></i> Conexão Segura
+                    </span>
+                    <span style="background: rgba(47, 158, 65, 0.1); color: #2F9E41; padding: 0.4rem 0.8rem; border-radius: 50px; font-size: 0.75rem; display: inline-flex; align-items: center; gap: 5px;">
+                        <i class="bi bi-clock-history"></i> Acesso 24/7
+                    </span>
+                    <span style="background: rgba(47, 158, 65, 0.1); color: #2F9E41; padding: 0.4rem 0.8rem; border-radius: 50px; font-size: 0.75rem; display: inline-flex; align-items: center; gap: 5px;">
+                        <i class="bi bi-headset"></i> Suporte Online
+                    </span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Botão Voltar ao Topo -->
+    <a href="#" class="btn-topo" title="Voltar ao topo" aria-label="Voltar ao topo">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M12 4l-8 8h6v8h4v-8h6z"/>
+        </svg>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <p>IFSP - Câmpus Pirituba - Av. Mutinga, 951 - Jardim Santo Elias - CEP: 05110-000 - São Paulo/SP</p>
+        <p>Contato: (011) 2504-0100</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Scripts -->
+    <script>
+        // Toggle para mostrar/esconder senha
+        const toggleSenha = document.getElementById('toggleSenha');
+        const senhaInput = document.getElementById('senha');
+        
+        if (toggleSenha && senhaInput) {
+            toggleSenha.addEventListener('click', function() {
+                const type = senhaInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                senhaInput.setAttribute('type', type);
+                const icon = this.querySelector('i');
+                if (icon) {
+                    icon.classList.toggle('bi-eye');
+                    icon.classList.toggle('bi-eye-slash');
+                }
+            });
+        }
+        
+        // Validação do formulário
+        const form = document.getElementById('loginForm');
+        
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const usuario = document.getElementById('usuario').value.trim();
+                const senha = document.getElementById('senha').value;
+                
+                if (!usuario || !senha) {
+                    alert('Por favor, preencha usuário e senha!');
+                } else {
+                    alert(`Bem-vindo, ${usuario}! Login realizado com sucesso.`);
+                    console.log('Redirecionando para página principal...');
+                    // window.location.href = 'index.html';
+                }
+            });
+        }
+        
+        // Botão Voltar ao Topo suave
+        const btnTopo = document.querySelector('.btn-topo');
+        if (btnTopo) {
+            btnTopo.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+        
+        console.log('✅ Página de login carregada com sucesso!');
+    </script>
+</body>
+</html>

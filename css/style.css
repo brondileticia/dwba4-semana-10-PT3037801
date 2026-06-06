@@ -1,0 +1,1407 @@
+/* ============================================
+   RESET E CONFIGURAÇÕES GERAIS
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Cores Principais do Design System */
+    --verde-principal: #2F9E41;
+    --verde-escuro: #238636;
+    --verde-claro: #D7E087;
+    --vermelho: #CD181D;
+    --vermelho-escuro: #a81418;
+    --cinza-fundo: #fafafa;
+    --cinza-claro: #f8f9fa;
+    --cinza-borda: #e9ecef;
+    --cinza-texto: #4a5568;
+    --texto-principal: #333;
+    
+    /* Sombras */
+    --sombra-padrao: 0 2px 10px rgba(0,0,0,0.1);
+    --sombra-suave: 0 3px 15px rgba(0,0,0,0.05);
+    --sombra-hover: 0 8px 25px rgba(47, 158, 65, 0.15);
+    --sombra-card: 0 3px 10px rgba(0,0,0,0.05);
+    
+    /* Bordas */
+    --border-radius-sm: 8px;
+    --border-radius-md: 12px;
+    --border-radius-lg: 16px;
+    --border-radius-xl: 20px;
+    --border-radius-full: 50px;
+    
+    /* Transições */
+    --transition-fast: 0.2s;
+    --transition-normal: 0.3s;
+    --transition-slow: 0.5s;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--texto-principal);
+    background: linear-gradient(135deg, #f5f7fa 0%, #eef2f5 100%);
+    min-height: 100vh;
+}
+
+/* ============================================
+   HEADER E NAVEGAÇÃO PRINCIPAL
+   ============================================ */
+
+/* Header Fixo */
+header {
+    background: linear-gradient(135deg, var(--verde-principal) 0%, var(--verde-escuro) 100%);
+    color: white;
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--sombra-padrao);
+    transition: all var(--transition-normal);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+    transition: transform var(--transition-fast);
+}
+
+.logo:hover {
+    transform: scale(1.02);
+}
+
+.logo-container h1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.logo-container h1 small {
+    font-size: 0.9rem;
+    font-weight: 300;
+    display: block;
+    color: var(--verde-claro);
+}
+
+/* Menu de Navegação */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 0.5rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius-sm);
+    transition: all var(--transition-normal);
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--verde-claro);
+    transition: all var(--transition-normal);
+    transform: translateX(-50%);
+}
+
+nav ul li a:hover::after {
+    width: 70%;
+}
+
+nav ul li a:hover {
+    background-color: var(--verde-claro);
+    color: var(--verde-principal);
+}
+
+/* Menu Superior Direito */
+.menu-superior {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.menu-superior a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 400;
+    transition: all var(--transition-fast);
+}
+
+.menu-superior a:hover {
+    transform: translateY(-2px);
+}
+
+.instagram-icon {
+    width: 24px;
+    height: 24px;
+    fill: white;
+    transition: transform var(--transition-normal);
+}
+
+.menu-superior a:hover .instagram-icon {
+    transform: scale(1.1);
+    fill: var(--verde-claro);
+}
+
+.menu-superior a:hover span {
+    color: var(--verde-claro);
+}
+
+/* ============================================
+   MAIN E LAYOUT PRINCIPAL
+   ============================================ */
+
+/* Main Content */
+main {
+    margin-top: 120px;
+    padding: 2rem;
+    min-height: calc(100vh - 270px);
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Navegação Interna da Home */
+.nav-interna {
+    background-color: white;
+    padding: 0.75rem;
+    margin-bottom: 2rem;
+    border-radius: var(--border-radius-full);
+    box-shadow: 0 2px 10px rgba(47, 158, 65, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.nav-interna ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.nav-interna ul li a {
+    color: var(--verde-principal);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-interna ul li a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--verde-claro);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform var(--transition-normal);
+    z-index: -1;
+    border-radius: 25px;
+}
+
+.nav-interna ul li a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.nav-interna ul li a:hover {
+    color: var(--verde-principal);
+}
+
+/* Seções */
+section {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background-color: white;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--sombra-suave);
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+section:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--sombra-hover);
+}
+
+h2 {
+    color: var(--verde-principal);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    border-bottom: 3px solid var(--verde-claro);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+/* ============================================
+   COMPONENTES
+   ============================================ */
+
+/* Cards de Cursos */
+.cursos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.curso-card {
+    background-color: white;
+    border-radius: var(--border-radius-md);
+    padding: 1.8rem;
+    box-shadow: var(--sombra-card);
+    transition: all var(--transition-normal);
+    border: 1px solid var(--cinza-borda);
+    position: relative;
+    overflow: hidden;
+}
+
+.curso-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--verde-principal), var(--verde-claro));
+    transform: scaleX(0);
+    transition: transform var(--transition-normal);
+}
+
+.curso-card:hover::before {
+    transform: scaleX(1);
+}
+
+.curso-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-hover);
+    border-color: var(--verde-claro);
+}
+
+.curso-card h3 {
+    color: var(--verde-principal);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.curso-card p {
+    color: #666;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.curso-card a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0.6rem 1.5rem;
+    background-color: var(--verde-principal);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all var(--transition-normal);
+    border: 1px solid var(--verde-principal);
+}
+
+.curso-card a:hover {
+    background-color: var(--vermelho);
+    border-color: var(--vermelho);
+    transform: translateX(4px);
+}
+
+/* Banner */
+.banner {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: var(--border-radius-md);
+    margin-bottom: 2rem;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: transform var(--transition-normal);
+}
+
+.banner:hover {
+    transform: scale(1.01);
+}
+
+/* Tabela de Eventos */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    border-radius: var(--border-radius-sm);
+    overflow: hidden;
+    box-shadow: var(--sombra-card);
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--cinza-borda);
+}
+
+th {
+    background: linear-gradient(135deg, var(--verde-principal) 0%, var(--verde-escuro) 100%);
+    color: white;
+    font-weight: 600;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover td {
+    background-color: rgba(47, 158, 65, 0.05);
+    transition: background-color var(--transition-fast);
+}
+
+/* Container do Vídeo */
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem auto;
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    transition: transform var(--transition-normal);
+}
+
+.video-container:hover {
+    transform: scale(1.01);
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+}
+
+/* Botão Topo */
+.btn-topo {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: linear-gradient(135deg, var(--verde-principal) 0%, var(--verde-escuro) 100%);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0 3px 15px rgba(47, 158, 65, 0.3);
+    transition: all var(--transition-normal);
+    z-index: 999;
+    opacity: 0.9;
+}
+
+.btn-topo:hover {
+    background: var(--vermelho);
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(205, 24, 29, 0.3);
+    opacity: 1;
+}
+
+.btn-topo svg {
+    width: 30px;
+    height: 30px;
+    fill: white;
+    transition: transform var(--transition-fast);
+}
+
+.btn-topo:hover svg {
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, var(--verde-principal) 0%, var(--verde-escuro) 100%);
+    color: white;
+    padding: 2.5rem;
+    text-align: center;
+    line-height: 1.8;
+    margin-top: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--verde-claro), transparent);
+    animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+    100% { left: 100%; }
+}
+
+footer p {
+    opacity: 0.9;
+    font-size: 0.95rem;
+    position: relative;
+    z-index: 1;
+}
+
+footer p:last-child {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+
+/* ============================================
+   PÁGINAS DE CONTEÚDO
+   ============================================ */
+
+.conteudo-pagina {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.conteudo-pagina h1 {
+    color: var(--verde-principal);
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.conteudo-pagina h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--verde-principal), var(--verde-claro));
+    border-radius: 3px;
+}
+
+.conteudo-pagina img {
+    max-width: 100%;
+    border-radius: var(--border-radius-md);
+    margin: 1.5rem 0;
+    box-shadow: var(--sombra-card);
+    transition: transform var(--transition-normal);
+}
+
+.conteudo-pagina img:hover {
+    transform: scale(1.01);
+}
+
+/* Áudio */
+audio {
+    width: 100%;
+    margin: 1.5rem 0;
+    border-radius: 30px;
+}
+
+/* Listas */
+.lista-customizada {
+    margin: 1.2rem 0 1.2rem 2rem;
+}
+
+.lista-customizada li {
+    margin: 0.7rem 0;
+    color: #555;
+    transition: transform var(--transition-fast);
+}
+
+.lista-customizada li:hover {
+    transform: translateX(5px);
+}
+
+.lista-customizada li strong {
+    color: var(--verde-principal);
+}
+
+/* Divs informativas */
+.info-box {
+    background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
+    border-left: 4px solid var(--verde-principal);
+    padding: 1.8rem;
+    margin: 1.8rem 0;
+    border-radius: 0 var(--border-radius-md) var(--border-radius-md) 0;
+    box-shadow: var(--sombra-card);
+    transition: all var(--transition-normal);
+}
+
+.info-box:hover {
+    transform: translateX(4px);
+    box-shadow: var(--sombra-hover);
+}
+
+.info-box h2 {
+    color: var(--verde-principal);
+    margin-top: 0;
+    margin-bottom: 1.2rem;
+    border-bottom: 2px solid var(--verde-claro);
+    padding-bottom: 0.5rem;
+}
+
+.info-box h3 {
+    color: var(--verde-principal);
+    margin: 1.2rem 0 0.8rem 0;
+    font-size: 1.2rem;
+}
+
+.info-box p {
+    color: #555;
+    line-height: 1.7;
+}
+
+/* Links */
+a {
+    color: var(--verde-principal);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all var(--transition-normal);
+}
+
+a:hover {
+    color: var(--vermelho);
+}
+
+/* Estilo para o link da biblioteca */
+.info-box a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 1rem;
+    padding: 0.6rem 1.5rem;
+    background-color: var(--verde-principal);
+    color: white;
+    border-radius: 25px;
+    transition: all var(--transition-normal);
+}
+
+.info-box a:hover {
+    background-color: var(--vermelho);
+    transform: translateX(4px);
+}
+
+/* ============================================
+   FORMULÁRIOS
+   ============================================ */
+
+.form-inscricao, .form-contato, .form-login {
+    background-color: white;
+    padding: 2rem;
+    border-radius: var(--border-radius-md);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: transform var(--transition-normal);
+}
+
+.form-inscricao:hover, .form-contato:hover, .form-login:hover {
+    transform: translateY(-2px);
+}
+
+.form-section {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--cinza-borda);
+}
+
+.form-section h3 {
+    color: var(--verde-principal);
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--texto-principal);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1.5px solid var(--cinza-borda);
+    border-radius: var(--border-radius-sm);
+    font-size: 1rem;
+    transition: all var(--transition-normal);
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--verde-principal);
+    box-shadow: 0 0 0 4px rgba(47, 158, 65, 0.1);
+}
+
+.form-group input[type="color"] {
+    width: 60px;
+    height: 40px;
+    padding: 2px;
+    cursor: pointer;
+}
+
+/* Radio e Checkbox */
+.radio-group,
+.checkbox-group {
+    display: flex;
+    gap: 2rem;
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.radio-group label,
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: normal;
+    cursor: pointer;
+    transition: color var(--transition-fast);
+}
+
+.radio-group label:hover,
+.checkbox-group label:hover {
+    color: var(--verde-principal);
+}
+
+.radio-group input,
+.checkbox-group input {
+    width: auto;
+    cursor: pointer;
+    accent-color: var(--verde-principal);
+}
+
+/* Select */
+select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1.5px solid var(--cinza-borda);
+    border-radius: var(--border-radius-sm);
+    font-size: 1rem;
+    background-color: white;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+}
+
+select:focus {
+    outline: none;
+    border-color: var(--verde-principal);
+    box-shadow: 0 0 0 4px rgba(47, 158, 65, 0.1);
+}
+
+/* Botões de Formulário */
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.btn-submit,
+.btn-reset {
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+}
+
+.btn-submit {
+    background: linear-gradient(135deg, var(--verde-principal) 0%, var(--verde-escuro) 100%);
+    color: white;
+}
+
+.btn-submit:hover {
+    background: var(--vermelho);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(205, 24, 29, 0.3);
+}
+
+.btn-reset {
+    background-color: #f0f0f0;
+    color: #666;
+}
+
+.btn-reset:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-2px);
+}
+
+/* Ajuda e Validação */
+.form-help {
+    display: block;
+    margin-top: 0.3rem;
+    font-size: 0.8rem;
+    color: #888;
+}
+
+/* Validação HTML5 */
+input:invalid {
+    border-color: var(--vermelho);
+}
+
+input:valid {
+    border-color: var(--verde-principal);
+}
+
+.form-group input:focus:invalid {
+    border-color: var(--vermelho);
+    box-shadow: 0 0 0 4px rgba(205, 24, 29, 0.1);
+}
+
+/* ============================================
+   LOGIN - UI/UX MELHORADO
+   ============================================ */
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    padding: 1rem;
+}
+
+.login-box {
+    max-width: 480px;
+    width: 100%;
+    margin: 0 auto;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.login-box h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.login-links {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.login-links a {
+    color: var(--verde-principal);
+    text-decoration: none;
+    transition: all var(--transition-fast);
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.login-links a:hover {
+    color: var(--vermelho);
+    transform: translateX(3px);
+}
+
+.login-links span {
+    margin: 0 0.5rem;
+    color: #ccc;
+}
+
+/* ============================================
+   EVENTOS
+   ============================================ */
+
+/* Cards de informações dos eventos */
+.eventos-info {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
+    border-radius: var(--border-radius-md);
+    border: 1px solid var(--cinza-borda);
+}
+
+.eventos-info h3 {
+    color: var(--verde-principal);
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.eventos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.evento-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--sombra-card);
+    transition: all var(--transition-normal);
+    border-left: 4px solid var(--verde-principal);
+    position: relative;
+    overflow: hidden;
+}
+
+.evento-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    background: linear-gradient(135deg, var(--verde-claro), transparent);
+    transition: width var(--transition-normal);
+}
+
+.evento-card:hover::after {
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+}
+
+.evento-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-hover);
+}
+
+.evento-card h4 {
+    color: var(--verde-principal);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.evento-card p {
+    margin: 0.5rem 0;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.evento-card p strong {
+    color: var(--texto-principal);
+}
+
+/* ============================================
+   SLIDESHOW
+   ============================================ */
+
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: 2rem auto;
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.slides-wrapper {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    visibility: hidden;
+}
+
+.slide.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.slide-caption h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.slide-caption p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* Botões de navegação do slideshow */
+.slide-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(47, 158, 65, 0.8);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-normal);
+    z-index: 10;
+    backdrop-filter: blur(4px);
+}
+
+.slide-btn:hover {
+    background-color: var(--verde-principal);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+/* Indicadores (dots) */
+.dots-container {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+}
+
+.dot.active {
+    background-color: var(--verde-principal);
+    width: 30px;
+    border-radius: 10px;
+}
+
+.dot:hover {
+    background-color: var(--verde-claro);
+    transform: scale(1.2);
+}
+
+/* Controles de reprodução */
+.slide-controls {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.control-btn {
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: all var(--transition-normal);
+    backdrop-filter: blur(4px);
+}
+
+.control-btn:hover {
+    background-color: var(--verde-principal);
+    transform: scale(1.05);
+}
+
+/* ============================================
+   ANIMAÇÕES
+   ============================================ */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================
+   RESPONSIVIDADE
+   ============================================ */
+
+/* Tablet */
+@media (max-width: 992px) {
+    .cursos-container {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    
+    .slides-wrapper {
+        height: 400px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    /* Header */
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+    
+    .logo-container {
+        margin-bottom: 0.5rem;
+    }
+    
+    .logo {
+        height: 40px;
+    }
+    
+    .logo-container h1 {
+        font-size: 1.2rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 0.3rem;
+        margin: 0.5rem 0;
+        width: 100%;
+    }
+    
+    nav ul li a {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+        display: block;
+    }
+    
+    .menu-superior {
+        margin-top: 0.5rem;
+    }
+    
+    /* Main */
+    main {
+        margin-top: 180px;
+        padding: 1rem;
+    }
+    
+    /* Navegação Interna */
+    .nav-interna {
+        border-radius: var(--border-radius-md);
+        padding: 0.5rem;
+    }
+    
+    .nav-interna ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .nav-interna ul li a {
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* Seções */
+    section {
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    h2 {
+        font-size: 1.4rem;
+    }
+    
+    /* Vídeo */
+    .video-container iframe {
+        height: 250px;
+    }
+    
+    /* Botão Topo */
+    .btn-topo {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+    }
+    
+    .btn-topo svg {
+        width: 24px;
+        height: 24px;
+    }
+    
+    /* Títulos */
+    .conteudo-pagina h1 {
+        font-size: 1.6rem;
+    }
+    
+    /* Formulários */
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    .btn-submit, .btn-reset {
+        width: 100%;
+    }
+    
+    .radio-group, .checkbox-group {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    /* Slideshow */
+    .slides-wrapper {
+        height: 300px;
+    }
+    
+    .slide-caption h3 {
+        font-size: 1rem;
+    }
+    
+    .slide-caption p {
+        font-size: 0.8rem;
+    }
+    
+    .slide-btn {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .prev {
+        left: 10px;
+    }
+    
+    .next {
+        right: 10px;
+    }
+    
+    .slide-caption {
+        padding: 1rem;
+    }
+    
+    /* Login */
+    .login-box {
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+    
+    .login-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    /* Cards */
+    .eventos-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cursos-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .curso-card {
+        padding: 1.2rem;
+    }
+    
+    /* Tabela */
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+    th, td {
+        padding: 0.75rem;
+        font-size: 0.85rem;
+    }
+    
+    /* Footer */
+    footer {
+        padding: 1.5rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* Mobile pequeno */
+@media (max-width: 480px) {
+    main {
+        margin-top: 220px;
+    }
+    
+    .logo-container h1 small {
+        font-size: 0.7rem;
+    }
+    
+    .curso-card h3 {
+        font-size: 1.1rem;
+    }
+    
+    .info-box {
+        padding: 1rem;
+    }
+    
+    .btn-submit, .btn-reset {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* ============================================
+   ACESSIBILIDADE E MELHORIAS
+   ============================================ */
+
+/* Focus visible para navegação por teclado */
+:focus-visible {
+    outline: 2px solid var(--verde-principal);
+    outline-offset: 2px;
+}
+
+/* Skip to content link */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--verde-principal);
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    z-index: 1001;
+    transition: top var(--transition-fast);
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* High contrast support */
+@media (prefers-contrast: high) {
+    .btn-submit, .curso-card a, .info-box a {
+        border: 2px solid currentColor;
+    }
+    
+    input, select, textarea {
+        border-width: 2px;
+    }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--cinza-claro);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, var(--verde-principal) 0%, var(--verde-escuro) 100%);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--vermelho);
+}
+
+/* Seleção de texto */
+::selection {
+    background-color: var(--verde-principal);
+    color: white;
+}

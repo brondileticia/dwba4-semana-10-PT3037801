@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFSP - Inscrição de Eventos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Header Fixo com subtítulo -->
+    <header>
+        <div class="logo-container">
+            <img src="img/Logo.png" alt="Logo IFSP" class="logo">
+            <h1>IFSP <small>Câmpus Pirituba</small></h1>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Principal</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="eventos.html">Eventos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Menu Superior Direito -->
+        <div class="menu-superior">
+            <a href="https://www.instagram.com/ifspcampuspirituba/" target="_blank">
+                <svg class="instagram-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1112.324 0 6.162 6.162 0 01-12.324 0zM12 16a4 4 0 110-8 4 4 0 010 8zm4.965-10.405a1.44 1.44 0 112.881.001 1.44 1.44 0 01-2.881-.001z"/>
+                </svg>
+                <span>@ifspcampuspirituba</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="conteudo-pagina">
+        <h1>Inscrição para Evento</h1>
+        
+        <div class="info-box">
+            <h2>Se inscreva nos eventos disponíveis!</h2>
+            <p>Participe e descubra novas possibilidades!</p>
+        </div>
+
+        <!-- Formulário de Inscrição -->
+        <form class="form-inscricao" action="#" method="POST">
+            <!-- Seleção do Evento -->
+            <div class="form-section">
+                <h3>Selecione o Evento</h3>
+                
+                <div class="form-group">
+                    <label for="evento">Evento:</label>
+                    <select id="evento" name="evento" required>
+                        <option value="">-- Selecione um evento --</option>
+                        <option value="semana_tecnologia">Semana de Tecnologia - 15 a 19/11/2024</option>
+                        <option value="feira_profissoes">Feira de Profissões - 25/11/2024</option>
+                        <option value="workshop_programacao">Workshop de Programação - 05/12/2024</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Informações de Acesso -->
+            <div class="form-section">
+                <h3>Informações de Acesso</h3>
+                
+                <div class="form-group">
+                    <label for="usuario">Usuário:</label>
+                    <input type="text" id="usuario" name="usuario" placeholder="username" pattern=".{3,}" title="Usuário deve ter pelo menos 3 caracteres" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" placeholder="******" pattern=".{6,}" title="Senha deve ter pelo menos 6 caracteres" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmar_senha">Confirme a Senha:</label>
+                    <input type="password" id="confirmar_senha" name="confirmar_senha" placeholder="******" pattern=".{6,}" title="Senha deve ter pelo menos 6 caracteres" required>
+                </div>
+            </div>
+
+            <!-- Informações Pessoais -->
+            <div class="form-section">
+                <h3>Informações Pessoais</h3>
+
+                <div class="form-group">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" placeholder="seuemail@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="celular">Celular:</label>
+                    <input type="tel" id="celular" name="celular" placeholder="(99) 99999-9999" pattern="\(\d{2}\) \d{5}-\d{4}" title="Formato: (99) 99999-9999" required>
+                    <small class="form-help">Formato: (99) 99999-9999</small>
+                </div>
+
+                <div class="form-group">
+                    <label>Sexo:</label>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="sexo" value="masculino" required> Masculino
+                        </label>
+                        <label>
+                            <input type="radio" name="sexo" value="feminino"> Feminino
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="data_nascimento">Data de Nascimento:</label>
+                    <input type="date" id="data_nascimento" name="data_nascimento" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="cor_favorita">Cor Favorita:</label>
+                    <input type="color" id="cor_favorita" name="cor_favorita" value="#2F9E41">
+                </div>
+
+                <div class="form-group">
+                    <label for="github">Perfil no Github:</label>
+                    <input type="url" id="github" name="github" placeholder="https://github.com/seuusuario">
+                </div>
+            </div>
+
+            <!-- Botão de Envio -->
+            <div class="form-actions">
+                <button type="submit" class="btn-submit">Inscrever-se</button>
+                <button type="reset" class="btn-reset">Limpar</button>
+            </div>
+        </form>
+
+        <!-- Informações adicionais sobre os eventos -->
+        <div class="eventos-info">
+            <h3>Eventos Disponíveis</h3>
+            <div class="eventos-grid">
+                <div class="evento-card">
+                    <h4>🎓 Semana de Tecnologia</h4>
+                    <p><strong>Data:</strong> 15 a 19 de Novembro de 2024</p>
+                    <p><strong>Local:</strong> Auditório do Câmpus</p>
+                    <p><strong>Vagas:</strong> 200</p>
+                </div>
+                <div class="evento-card">
+                    <h4>💼 Feira de Profissões</h4>
+                    <p><strong>Data:</strong> 25 de Novembro de 2024</p>
+                    <p><strong>Local:</strong> Pátio Principal</p>
+                    <p><strong>Vagas:</strong> 500</p>
+                </div>
+                <div class="evento-card">
+                    <h4>💻 Workshop de Programação</h4>
+                    <p><strong>Data:</strong> 05 de Dezembro de 2024</p>
+                    <p><strong>Local:</strong> Laboratório de Informática</p>
+                    <p><strong>Vagas:</strong> 40</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Botão Voltar ao Topo -->
+    <a href="#" class="btn-topo" title="Voltar ao topo">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 4l-8 8h6v8h4v-8h6z"/>
+        </svg>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <p>IFSP - Câmpus Pirituba - Av. Mutinga, 951 - Jardim Santo Elias - CEP: 05110-000 - São Paulo/SP</p>
+        <p>Contato: (011) 2504-0100</p>
+    </footer>
+</body>
+</html>

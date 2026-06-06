@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFSP - Contato</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Header Fixo com subtítulo -->
+    <header>
+        <div class="logo-container">
+            <img src="img/Logo.png" alt="Logo IFSP" class="logo">
+            <h1>IFSP <small>Câmpus Pirituba</small></h1>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Principal</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="eventos.html">Eventos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Menu Superior Direito -->
+        <div class="menu-superior">
+            <a href="https://www.instagram.com/ifspcampuspirituba/" target="_blank">
+                <svg class="instagram-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1112.324 0 6.162 6.162 0 01-12.324 0zM12 16a4 4 0 110-8 4 4 0 010 8zm4.965-10.405a1.44 1.44 0 112.881.001 1.44 1.44 0 01-2.881-.001z"/>
+                </svg>
+                <span>@ifspcampuspirituba</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="conteudo-pagina">
+        <h1>Mande uma mensagem</h1>
+
+        <!-- Formulário de Contato -->
+        <form class="form-contato" action="#" method="POST">
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-Mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="(99) 99999-9999">
+            </div>
+
+            <div class="form-group">
+                <label for="assunto">Assunto:</label>
+                <select id="assunto" name="assunto" required>
+                    <option value="">-- Selecione --</option>
+                    <option value="duvidas">Dúvidas sobre cursos</option>
+                    <option value="matricula">Matrícula</option>
+                    <option value="eventos">Eventos</option>
+                    <option value="biblioteca">Biblioteca</option>
+                    <option value="sugestoes">Sugestões</option>
+                    <option value="reclamacoes">Reclamações</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+            </div>
+
+            <!-- Opções de Resposta -->
+            <div class="form-group">
+                <label>Opções de Resposta:</label>
+                <div class="checkbox-group">
+                    <label>
+                        <input type="checkbox" name="resposta_email" value="email"> E-Mail
+                    </label>
+                    <label>
+                        <input type="checkbox" name="resposta_telefone" value="telefone"> Telefone
+                    </label>
+                </div>
+                <small class="form-help">Selecione pelo menos uma opção de contato para resposta</small>
+            </div>
+
+            <!-- Botão de Envio -->
+            <div class="form-actions">
+                <button type="submit" class="btn-submit">Enviar</button>
+                <button type="reset" class="btn-reset">Limpar</button>
+            </div>
+        </form>
+
+        <!-- Informações de Contato do IFSP -->
+        <div class="info-box" style="margin-top: 2rem;">
+            <h3>Outros Canais de Atendimento</h3>
+            <p><strong>Telefone:</strong> (011) 2504-0100</p>
+            <p><strong>E-mail institucional:</strong> pirituba@ifsp.edu.br</p>
+            <p><strong>Horário de atendimento:</strong> Segunda a Sexta, 8h às 22h</p>
+        </div>
+    </main>
+
+    <!-- Botão Voltar ao Topo -->
+    <a href="#" class="btn-topo" title="Voltar ao topo">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 4l-8 8h6v8h4v-8h6z"/>
+        </svg>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <p>IFSP - Câmpus Pirituba - Av. Mutinga, 951 - Jardim Santo Elias - CEP: 05110-000 - São Paulo/SP</p>
+        <p>Contato: (011) 2504-0100</p>
+    </footer>
+</body>
+</html>

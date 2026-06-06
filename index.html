@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site oficial do IFSP Câmpus Pirituba - Cursos, eventos, biblioteca digital e mais">
+    <meta name="keywords" content="IFSP, Pirituba, cursos, eventos, biblioteca, SUAP">
+    <meta name="author" content="IFSP Câmpus Pirituba">
+    <title>IFSP - Câmpus Pirituba</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- Preload para imagens principais -->
+    <link rel="preload" as="image" href="img/slideshow/banner site.png">
+    <link rel="preload" as="image" href="img/Logo.png">
+</head>
+<body>
+    <!-- Skip to content link para acessibilidade -->
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+    <!-- Header Fixo com subtítulo -->
+    <header>
+        <div class="logo-container">
+            <img src="img/Logo.png" alt="Logo IFSP - Instituto Federal de São Paulo" class="logo" width="50" height="50">
+            <h1>IFSP <small>Câmpus Pirituba</small></h1>
+        </div>
+        
+        <nav aria-label="Menu principal">
+            <button class="menu-mobile-btn" id="menuMobileBtn" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul id="menuList">
+                <li><a href="index.html" aria-current="page">Principal</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="eventos.html">Eventos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Menu Superior Direito -->
+        <div class="menu-superior">
+            <a href="https://www.instagram.com/ifspcampuspirituba/" target="_blank" rel="noopener noreferrer" aria-label="Instagram do IFSP Câmpus Pirituba">
+                <svg class="instagram-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1112.324 0 6.162 6.162 0 01-12.324 0zM12 16a4 4 0 110-8 4 4 0 010 8zm4.965-10.405a1.44 1.44 0 112.881.001 1.44 1.44 0 01-2.881-.001z"/>
+                </svg>
+                <span>@ifspcampuspirituba</span>
+            </a>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- Navegação Interna da Home -->
+        <div class="nav-interna" aria-label="Navegação rápida">
+            <ul>
+                <li><a href="#cursos">📚 Opções de Cursos</a></li>
+                <li><a href="#eventos">📅 Eventos</a></li>
+                <li><a href="#biblioteca">📖 Biblioteca</a></li>
+                <li><a href="#suap">💻 SUAP</a></li>
+            </ul>
+        </div>
+
+        <!-- SLIDESHOW - 4 Slides personalizados -->
+        <div class="slideshow-container" aria-label="Slideshow de destaques">
+            <div class="slides-wrapper">
+                <!-- Slide 1: Entrada do Campus -->
+                <div class="slide active">
+                    <img src="img/slideshow/banner site.png" alt="Entrada do Câmpus Pirituba - Fachada principal" loading="eager">
+                    <div class="slide-caption">
+                        <h3>🏛️ Bem-vindo ao Câmpus Pirituba</h3>
+                        <p>Estrutura moderna e acolhedora para sua formação profissional</p>
+                    </div>
+                </div>
+                
+                <!-- Slide 2: Caixinha de Sugestões -->
+                <div class="slide">
+                    <img src="img/slideshow/caixinha de sugestoes.png" alt="Caixinha de Sugestões - Participe!" loading="lazy">
+                    <div class="slide-caption">
+                        <h3>💡 Sua Opinião é Importante!</h3>
+                        <p>Participe! Utilize a caixinha de sugestões para melhorar nosso câmpus</p>
+                    </div>
+                </div>
+                
+                <!-- Slide 3: Processo Seletivo 2026 -->
+                <div class="slide">
+                    <img src="img/slideshow/cursos tecnicos.jpeg" alt="Processo Seletivo IFSP 2026 - Cursos Técnicos Gratuitos" loading="lazy">
+                    <div class="slide-caption">
+                        <h3>📢 Processo Seletivo 2026</h3>
+                        <p>Cursos Técnicos Gratuitos - 2º Semestre de 2026</p>
+                        <p class="highlight">📅 Inscrições abertas! Garanta sua vaga</p>
+                    </div>
+                </div>
+                
+                <!-- Slide 4: Comunidade WhatsApp -->
+                <div class="slide">
+                    <img src="img/slideshow/wpp.png" alt="Comunidade WhatsApp IFSP - Fique por dentro das novidades" loading="lazy">
+                    <div class="slide-caption">
+                        <h3>📱 Fique por dentro das novidades!</h3>
+                        <p>Participe da nossa comunidade no WhatsApp e receba notícias em primeira mão</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Botões de navegação -->
+            <button class="slide-btn prev" aria-label="Slide anterior">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M15 18L9 12L15 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <button class="slide-btn next" aria-label="Próximo slide">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M9 18L15 12L9 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            
+            <!-- Indicadores (dots) -->
+            <div class="dots-container" aria-label="Indicadores de slides">
+                <span class="dot active" data-slide="0" aria-label="Ir para slide 1"></span>
+                <span class="dot" data-slide="1" aria-label="Ir para slide 2"></span>
+                <span class="dot" data-slide="2" aria-label="Ir para slide 3"></span>
+                <span class="dot" data-slide="3" aria-label="Ir para slide 4"></span>
+            </div>
+            
+            <!-- Controles de reprodução -->
+            <div class="slide-controls">
+                <button class="control-btn" id="playPauseBtn" aria-label="Play/Pause slideshow">⏸ Pausar</button>
+            </div>
+        </div>
+
+        <!-- Seção de Cursos -->
+        <section id="cursos">
+            <h2>📚 Opções de Cursos</h2>
+            <div class="cursos-container">
+                <div class="curso-card">
+                    <h3>💻 Análise e Desenvolvimento de Sistemas</h3>
+                    <p>Curso superior de tecnologia para formação de profissionais em desenvolvimento de software.</p>
+                    <a href="cursos.html#ads" aria-label="Saiba mais sobre Análise e Desenvolvimento de Sistemas">Saiba mais →</a>
+                </div>
+                <div class="curso-card">
+                    <h3>🏭 Engenharia de Produção</h3>
+                    <p>Formação de engenheiros capacitados para otimizar processos produtivos.</p>
+                    <a href="cursos.html#engenharia" aria-label="Saiba mais sobre Engenharia de Produção">Saiba mais →</a>
+                </div>
+                <div class="curso-card">
+                    <h3>📊 Gestão em Tecnologia da Informação</h3>
+                    <p>Curso superior para gestão de recursos e projetos de TI.</p>
+                    <a href="cursos.html#gestao-ti" aria-label="Saiba mais sobre Gestão em TI">Saiba mais →</a>
+                </div>
+                <div class="curso-card">
+                    <h3>📖 Letras</h3>
+                    <p>Licenciatura em Português/Inglês para formação de professores.</p>
+                    <a href="cursos.html#letras" aria-label="Saiba mais sobre Letras">Saiba mais →</a>
+                </div>
+                <div class="curso-card">
+                    <h3>🏛️ Gestão Pública</h3>
+                    <p>Tecnologia em Gestão Pública para administração de órgãos governamentais.</p>
+                    <a href="cursos.html#gestao-publica" aria-label="Saiba mais sobre Gestão Pública">Saiba mais →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Eventos -->
+        <section id="eventos">
+            <h2>📅 Eventos</h2>
+            <div class="eventos-destaque">
+                <img src="img/SEJA_RARO.jpg" alt="Evento Seja Raro - Participe!" class="evento-banner" loading="lazy">
+            </div>
+            
+            <!-- Tabela de Eventos -->
+            <div class="table-responsive">
+                <table aria-label="Tabela de eventos programados">
+                    <thead>
+                        <tr>
+                            <th>Evento</th>
+                            <th>Data</th>
+                            <th>Local</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>🎓 Semana de Tecnologia</td>
+                            <td>15 a 19/11/2024</td>
+                            <td>Auditório</td>
+                        </tr>
+                        <tr>
+                            <td>💼 Feira de Profissões</td>
+                            <td>25/11/2024</td>
+                            <td>Pátio Principal</td>
+                        </tr>
+                        <tr>
+                            <td>💻 Workshop de Programação</td>
+                            <td>05/12/2024</td>
+                            <td>Lab. Informática</td>
+                        </tr>
+                        <tr>
+                            <td>📚 Semana de Letras</td>
+                            <td>10 a 14/12/2024</td>
+                            <td>Sala 105</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Seção Biblioteca -->
+        <section id="biblioteca">
+            <h2>📖 Biblioteca</h2>
+            <div class="info-box">
+                <h3>📚 Biblioteca Digital</h3>
+                <p>Conheça os novos títulos disponíveis na nossa biblioteca digital!</p>
+                <p>A biblioteca do Câmpus Pirituba conta com um acervo de mais de 10.000 livros, além de periódicos, teses e materiais multimídia.</p>
+                <a href="https://plataforma.bvirtual.com.br/" target="_blank" rel="noopener noreferrer" class="btn-biblioteca">
+                    Acesse a Biblioteca Digital →
+                </a>
+            </div>
+        </section>
+
+        <!-- Seção SUAP com vídeo incorporado -->
+        <section id="suap">
+            <h2>💻 Conheça o SUAP</h2>
+            <div class="info-box">
+                <p>O SUAP (Sistema Unificado de Administração Pública) é o sistema integrado que permite acesso a diversas funcionalidades acadêmicas e administrativas do IFSP.</p>
+            </div>
+            
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/_nIf3XuSWCQ?si=Hv5KYUFjW10kNJah" 
+                        title="Vídeo explicativo do SUAP - Sistema Unificado de Administração Pública"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                        loading="lazy">
+                </iframe>
+            </div>
+        </section>
+    </main>
+
+    <!-- Botão Voltar ao Topo com ícone SVG -->
+    <a href="#" class="btn-topo" title="Voltar ao topo" aria-label="Voltar ao topo da página">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M12 4l-8 8h6v8h4v-8h6z"/>
+        </svg>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>IFSP - Câmpus Pirituba - Av. Mutinga, 951 - Jardim Santo Elias - CEP: 05110-000 - São Paulo/SP</p>
+            <p>Contato: (011) 2504-0100</p>
+            <p class="footer-copy">© 2024 Instituto Federal de São Paulo - Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript do Slideshow e melhorias -->
+    <script>
+        // ============================================
+        // SLIDESHOW - Manipulação do DOM
+        // ============================================
+        
+        // Selecionando elementos do DOM
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+        const prevBtn = document.querySelector('.prev');
+        const nextBtn = document.querySelector('.next');
+        const playPauseBtn = document.getElementById('playPauseBtn');
+        
+        // Variáveis de controle
+        let currentSlide = 0;
+        let slideInterval;
+        let isPlaying = true;
+        const INTERVAL_TIME = 6000; // 6 segundos
+        
+        // Função para mostrar um slide específico
+        function showSlide(index) {
+            if (index < 0) index = slides.length - 1;
+            if (index >= slides.length) index = 0;
+            
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            slides[index].classList.add('active');
+            dots[index].classList.add('active');
+            currentSlide = index;
+            
+            // Atualizar aria-label dos dots
+            dots.forEach((dot, i) => {
+                dot.setAttribute('aria-label', i === currentSlide ? 'Slide atual' : `Ir para slide ${i + 1}`);
+            });
+        }
+        
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+        
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+        
+        function startSlideshow() {
+            if (slideInterval) clearInterval(slideInterval);
+            slideInterval = setInterval(nextSlide, INTERVAL_TIME);
+            isPlaying = true;
+            if (playPauseBtn) {
+                playPauseBtn.innerHTML = '⏸ Pausar';
+                playPauseBtn.setAttribute('aria-label', 'Pausar slideshow');
+            }
+        }
+        
+        function pauseSlideshow() {
+            if (slideInterval) {
+                clearInterval(slideInterval);
+                slideInterval = null;
+            }
+            isPlaying = false;
+            if (playPauseBtn) {
+                playPauseBtn.innerHTML = '▶ Play';
+                playPauseBtn.setAttribute('aria-label', 'Iniciar slideshow');
+            }
+        }
+        
+        function togglePlayPause() {
+            isPlaying ? pauseSlideshow() : startSlideshow();
+        }
+        
+        // Event Listeners
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => {
+                nextSlide();
+                if (isPlaying) {
+                    pauseSlideshow();
+                    startSlideshow();
+                }
+            });
+        }
+        
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => {
+                prevSlide();
+                if (isPlaying) {
+                    pauseSlideshow();
+                    startSlideshow();
+                }
+            });
+        }
+        
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                showSlide(index);
+                if (isPlaying) {
+                    pauseSlideshow();
+                    startSlideshow();
+                }
+            });
+        });
+        
+        if (playPauseBtn) {
+            playPauseBtn.addEventListener('click', togglePlayPause);
+        }
+        
+        // Pausar ao passar o mouse
+        const slideshowContainer = document.querySelector('.slideshow-container');
+        if (slideshowContainer) {
+            slideshowContainer.addEventListener('mouseenter', () => {
+                if (isPlaying) pauseSlideshow();
+            });
+            slideshowContainer.addEventListener('mouseleave', () => {
+                if (!isPlaying) startSlideshow();
+            });
+        }
+        
+        // Navegação por teclado
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                prevSlide();
+                if (isPlaying) {
+                    pauseSlideshow();
+                    startSlideshow();
+                }
+            } else if (e.key === 'ArrowRight') {
+                nextSlide();
+                if (isPlaying) {
+                    pauseSlideshow();
+                    startSlideshow();
+                }
+            }
+        });
+        
+        // Botão Voltar ao Topo suave
+        const btnTopo = document.querySelector('.btn-topo');
+        if (btnTopo) {
+            btnTopo.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+            
+            // Mostrar/esconder botão topo baseado no scroll
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    btnTopo.style.opacity = '1';
+                    btnTopo.style.visibility = 'visible';
+                } else {
+                    btnTopo.style.opacity = '0';
+                    btnTopo.style.visibility = 'hidden';
+                }
+            });
+            btnTopo.style.transition = 'opacity 0.3s, visibility 0.3s';
+            btnTopo.style.opacity = '0';
+            btnTopo.style.visibility = 'hidden';
+        }
+        
+        // Menu mobile
+        const menuMobileBtn = document.getElementById('menuMobileBtn');
+        const menuList = document.getElementById('menuList');
+        
+        if (menuMobileBtn && menuList) {
+            menuMobileBtn.addEventListener('click', () => {
+                menuList.classList.toggle('show');
+                const expanded = menuList.classList.contains('show');
+                menuMobileBtn.setAttribute('aria-expanded', expanded);
+            });
+        }
+        
+        // Iniciar slideshow
+        startSlideshow();
+        
+        console.log('🎬 ========== SITE IFSP INICIALIZADO ==========');
+        console.log(`📊 Total de slides: ${slides.length}`);
+        console.log(`⏱️ Intervalo: ${INTERVAL_TIME/1000} segundos`);
+        console.log('🎨 Página carregada com sucesso!');
+    </script>
+
+    <style>
+        /* Estilos adicionais para menu mobile e melhorias */
+        .menu-mobile-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 1001;
+        }
+        
+        .menu-mobile-btn span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 5px 0;
+            transition: all 0.3s;
+            border-radius: 3px;
+        }
+        
+        .evento-banner {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s;
+        }
+        
+        .evento-banner:hover {
+            transform: scale(1.01);
+        }
+        
+        .table-responsive {
+            overflow-x: auto;
+        }
+        
+        .footer-copy {
+            margin-top: 1rem;
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+        
+        .btn-biblioteca {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .highlight {
+            font-weight: bold;
+            color: #D7E087;
+            margin-top: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .menu-mobile-btn {
+                display: block;
+            }
+            
+            nav ul {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background: linear-gradient(135deg, var(--verde-principal) 0%, var(--verde-escuro) 100%);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: left 0.3s;
+                z-index: 999;
+            }
+            
+            nav ul.show {
+                left: 0;
+            }
+            
+            .menu-mobile-btn.active span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            
+            .menu-mobile-btn.active span:nth-child(2) {
+                opacity: 0;
+            }
+            
+            .menu-mobile-btn.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -6px);
+            }
+        }
+    </style>
+</body>
+</html>
